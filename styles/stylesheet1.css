@@ -9,7 +9,6 @@
     --primary-color:#ff8882;
     --black-color:#0E2431;
     --white-color:#fff;
-
 }
 body{
   font-family: sans-serif;
@@ -23,7 +22,6 @@ header{
   z-index: 999;
   background:var(--primary-color);
 }
-
 header nav{
   width:90%;
   display:flex;
@@ -31,7 +29,6 @@ header nav{
   align-items: center;
   margin:auto;
 }
-
 header nav .menu{
   display:flex;
   position:relative;
@@ -85,12 +82,14 @@ nav .menu a:hover{
   margin:5px 0;
 }
 
-
-/* About Section Styling */
-section{
+/* Section Styling */
+.about,.contact {
   height:100vh;
   padding-top: 60px;
   background: #f0f8ff;
+}
+.contact .content {
+  width: 30%;
 }
 section .content{
   width:90%;
@@ -121,6 +120,12 @@ section .title span::after{
   background:var(--primary-color);
   left:0;
   bottom:0;
+  animation-name: anime;
+  animation-duration: 4s;
+}
+@keyframes anime {
+  from {background-color: var(--primary-color); }
+  to {background-color: yellow;}
 }
 section .button{
   margin:30px 0;
@@ -141,10 +146,6 @@ section .button button:hover{
   background-color: var(--white-color);
   color:var(--primary-color);
 }
-@keyframes anime {
-  from {background-color: var(--primary-color); }
-  to {background-color: yellow;}
-}
 section p {
   margin: 10px auto;
 }
@@ -158,7 +159,6 @@ section p span{
 .about .button button a{
   color: var(--white-color);
 }
-
 input[type=text], textarea {
   width: 100%;
   padding: 12px;
@@ -171,7 +171,9 @@ input[type=text], textarea {
 
 /* My Gallery CSS */
 .gallery {
-  padding: 50% 20%;
+  height:100%;
+  padding: 10% 20%;
+  background: #f0f8ff;
 }
 .grid-container {
   display: grid;
@@ -215,24 +217,26 @@ footer .text span{
   nav {
     width:90%;
   } 
-   nav.active .menu{
-     left:0;
-   }
-   nav .menu a{
+  nav .menu a{
      font-size:23px;
      display:block;
      color:var(--white-color);
      margin:10px 0;
-   }
-
-   .home .text-two{
+  }
+  .home .text-two{
      font-size: 65px;
-   }
-   .home .text-three{
+  }
+  .home .text-three{
     font-size: 35px;
   }
   .about .about-details{
     width:90%;
+  }
+  .contact .content {
+    width: 90%;
+  }
+  .gallery{
+    padding-top: 100px;
   }
 }
 
